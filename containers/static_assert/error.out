@@ -1,0 +1,6 @@
+In file included from corret.cpp:4:0:
+Vector.h: In instantiation of ‘const Type_t& qmcplusplus::Vector<T, Alloc, MemType>::operator[](size_t) const [with T = int; Alloc = qmcplusplus::NoHostallocator<int, 64ul>; unsigned int MemType = 1u; qmcplusplus::Vector<T, Alloc, MemType>::Type_t = int; size_t = long unsigned int]’:
+corret.cpp:15:32:   required from here
+Vector.h:66:5: error: static assertion failed: Vector::operator[] MemType must be MemorySpace::HOST
+     static_assert(MemType == MemorySpace::HOST, "Vector::operator[] MemType must be MemorySpace::HOST");
+     ^~~~~~~~~~~~~

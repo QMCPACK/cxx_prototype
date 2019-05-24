@@ -1,0 +1,4 @@
+corret.cpp: In function ‘int main()’:
+corret.cpp:16:30: error: no match for ‘operator[]’ (operand types are ‘qmcplusplus::Vector<int, qmcplusplus::NoHostallocator<int, 64ul> >’ and ‘int’)
+   std::cout << "c[2] = " << c[2] << std::endl;
+                              ^
