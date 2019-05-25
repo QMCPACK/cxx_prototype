@@ -27,7 +27,6 @@
 
 namespace qmcplusplus
 {
-
 template<class T, typename Alloc = std::allocator<T>>
 class Vector
 {

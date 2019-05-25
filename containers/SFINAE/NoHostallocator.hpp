@@ -22,7 +22,6 @@
 
 namespace qmcplusplus
 {
-
 template<typename T, size_t ALIGN>
 struct NoHostallocator
 {
