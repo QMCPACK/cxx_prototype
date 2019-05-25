@@ -16,8 +16,17 @@ The goal is to have maximal flexibility and hopefully minimal code.
 
 So far, tried
 1. static_assert
-Working. Developer controlled error.
+Working.
+One implementation of Vector class. No specialization.
+Some if-statement to bypass value initialization if the memory is not host accessible.
+If member function is invalid, get a developer controlled error.
+
 2. SFINAE
-Not working yet
+Working.
+Put an is_host_accessible specialization
+
 3. MultiSpecialization
-Working. "error: no match for ‘operator[]’"
+Working.
+One fallback for host accessible allocators.
+Individual specialization for host non-accessible allocators.
+If member function is invalid, get "error: no match for ‘operator[]’"

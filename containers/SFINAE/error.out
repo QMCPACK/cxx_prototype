@@ -1,0 +1,9 @@
+corret.cpp: In function ‘int main()’:
+corret.cpp:15:30: error: no match for ‘operator[]’ (operand types are ‘qmcplusplus::Vector<int, qmcplusplus::NoHostallocator<int, 64ul> >’ and ‘int’)
+   std::cout << "c[2] = " << c[2] << std::endl;
+                              ^
+In file included from corret.cpp:4:0:
+Vector.h:77:24: note: candidate: template<class Allocator, class> const Type_t& qmcplusplus::Vector<T, Alloc>::operator[](size_t) const [with Allocator = Allocator; <template-parameter-2-2> = <template-parameter-1-2>; T = int; Alloc = qmcplusplus::NoHostallocator<int, 64ul>]
+   inline const Type_t& operator[](size_t i) const
+                        ^~~~~~~~
+Vector.h:77:24: note:   template argument deduction/substitution failed:

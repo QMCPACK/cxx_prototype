@@ -18,9 +18,11 @@
 #include <string>
 #include <stdexcept>
 #include <string>
+#include "access_traits.h"
 
 namespace qmcplusplus
 {
+
 template<typename T, size_t ALIGN>
 struct NoHostallocator
 {
@@ -82,6 +84,13 @@ bool operator!=(const NoHostallocator<T1, ALIGN1>&, const NoHostallocator<T2, AL
 {
   return ALIGN1 != ALIGN2;
 }
+
+template<typename T, size_t ALIGN>
+struct is_host_accessible<NoHostallocator<T, ALIGN>>
+{
+  const static bool value = false;
+};
+
 } // namespace qmcplusplus
 
 #endif
